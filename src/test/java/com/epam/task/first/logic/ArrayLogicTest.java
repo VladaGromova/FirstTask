@@ -7,16 +7,13 @@ import org.junit.Test;
 public class ArrayLogicTest {
 
     private ArrayLogic arrayLogic = new ArrayLogic();
-    private boolean thrown = false;
 
     @Test
     public void testFindMaxShouldFindMaxWhenPositiveNumbersApplied(){
         // given
         Array array = new Array(1, 3, 2);
-
         //when
         int actual = arrayLogic.findMax(array);
-
         //then
         Assert.assertEquals(3, actual);
     }
@@ -35,16 +32,10 @@ public class ArrayLogicTest {
         Assert.assertEquals(0, actual);
     }
 
-    //@Test (expected = IllegalArgumentException.class)
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testFindMaxShouldThrowExceptionWhenArrayIsEmpty(){
         Array array = new Array();
-        try{
         int actual = arrayLogic.findMax(array);
-        } catch (IllegalArgumentException e){
-            thrown = true;
-        }
-        Assert.assertTrue(thrown);
     }
 
     @Test
@@ -71,15 +62,10 @@ public class ArrayLogicTest {
         Assert.assertEquals("-3.0", actual);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testFindMeanShouldThrowExceptionWhenArrayIsEmpty(){
         Array array = new Array();
-        try{
         double actual = arrayLogic.findMean(array);
-    } catch (IllegalArgumentException e){
-        thrown = true;
-    }
-        Assert.assertTrue(thrown);
     }
 
     @Test
@@ -103,15 +89,10 @@ public class ArrayLogicTest {
         Assert.assertEquals(0, actual);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testFindMinShouldThrowExceptionWhenArrayIsEmpty(){
         Array array = new Array();
-        try{
         int actual = arrayLogic.findMin(array);
-    } catch (IllegalArgumentException e){
-        thrown = true;
-    }
-        Assert.assertTrue(thrown);
     }
 
     @Test
@@ -138,15 +119,10 @@ public class ArrayLogicTest {
         Assert.assertEquals(actual.getElements(), expected.getElements());
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testChangeToTheOppositeShouldThrowExceptionWhenArrayIsEmpty(){
         Array array = new Array();
-        try{
         Array actual = arrayLogic.changeToTheOpposite(array);
-        } catch (IllegalArgumentException e){
-            thrown = true;
-        }
-        Assert.assertTrue(thrown);
     }
 
     @Test
@@ -162,17 +138,11 @@ public class ArrayLogicTest {
         Assert.assertEquals(-6, actual);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testFindSumShouldThrowExceptionWhenArrayIsEmpty(){
         Array array = new Array();
-        try{
         int actual = arrayLogic.findSum(array);
-        } catch (IllegalArgumentException e){
-            thrown = true;
-        }
-        Assert.assertTrue(thrown);
     }
-
 
     @Test
     public void testGetNumberOfPositiveNumbersShouldWorkWhenBothPositiveAndNegativeApplied(){
@@ -180,6 +150,7 @@ public class ArrayLogicTest {
         int actual = arrayLogic.getNumberOfPositiveNumbers(array);
         Assert.assertEquals(2, actual);
     }
+
     @Test
     public void testGetNumberOfPositiveNumbersShouldWorkWhenOnlyPositiveApplied(){
         Array array = new Array(1, 3, 2);
@@ -194,15 +165,10 @@ public class ArrayLogicTest {
         Assert.assertEquals(0, actual);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testGetNumberOfPositiveNumbersThrowExceptionWhenArrayIsEmpty(){
         Array array = new Array();
-        try{
         int actual = arrayLogic.getNumberOfPositiveNumbers(array);
-        } catch (IllegalArgumentException e){
-            thrown = true;
-        }
-        Assert.assertTrue(thrown);
     }
     @Test
     public void testGetNumberOfNegativeNumbersShouldWorkWhenBothPositiveAndNegativeApplied(){
@@ -224,15 +190,10 @@ public class ArrayLogicTest {
         Assert.assertEquals(3, actual);
     }
 
-    @Test
+    @Test (expected = IllegalArgumentException.class)
     public void testGetNumberOfNegativeNumbersThrowExceptionWhenArrayIsEmpty(){
         Array array = new Array();
-        try{
         int actual = arrayLogic.getNumberOfNegativeNumbers(array);
-        } catch (IllegalArgumentException e){
-            thrown = true;
-        }
-        Assert.assertTrue(thrown);
     }
 
 }

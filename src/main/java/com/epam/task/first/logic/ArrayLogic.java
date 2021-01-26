@@ -8,7 +8,7 @@ public class ArrayLogic {
 
     private void checkValidity(List<Integer> elements){
         if (elements.isEmpty()){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Array is empty!");
         }
     }
 

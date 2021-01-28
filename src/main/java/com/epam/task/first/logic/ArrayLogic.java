@@ -81,9 +81,8 @@ public class ArrayLogic {
         List<Integer> elements = array.getElements();
         checkValidity(elements);
         int size = elements.size();
-        int newNumber;
         for (int i=0; i< size; ++i){
-            newNumber = (elements.get(i))*(-1);
+            int newNumber = (elements.get(i))*(-1);
             elements.remove(i);
             elements.add(i, newNumber);
         }

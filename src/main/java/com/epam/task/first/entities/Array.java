@@ -1,13 +1,10 @@
 package com.epam.task.first.entities;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Array {
 
-    private final List<Integer> elements;
+    private List<Integer> elements;
 
     public Array(Integer... elements){
         this.elements = new ArrayList<Integer>();
@@ -16,6 +13,7 @@ public class Array {
 
     public Array(List<Integer> elements) {
         this.elements = elements;
+        this.elements = Collections.unmodifiableList(elements);
     }
 
     public List<Integer> getElements() {
@@ -24,7 +22,6 @@ public class Array {
 
     @Override
     public boolean equals(Object obj) {
-        //  return super.equals(obj);
         if (obj == this) {
             return true;
         }

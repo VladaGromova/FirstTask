@@ -13,13 +13,13 @@ public class ArraySorter {
     }
 
     private void swap(List<Integer> elements, int firstIndex, int secondIndex){
-        int tmp = elements.get(firstIndex);
+        int temp = elements.get(firstIndex);
         int elementToReplace = elements.get(secondIndex);
         elements.set(firstIndex, elementToReplace);
-        elements.set(secondIndex, tmp);
+        elements.set(secondIndex, temp);
     }
 
-    public void bubbleSort(Array array){
+    public Array bubbleSort(Array array){
         List<Integer> elements = array.getElements();
         checkValidity(elements);
         int size = elements.size();
@@ -32,10 +32,10 @@ public class ArraySorter {
                 }
             }
         }
-        array = new Array(elements);
+        return new Array(elements);
     }
 
-    public void shakerSort(Array array){
+    public Array shakerSort(Array array){
         List<Integer> elements = array.getElements();
         checkValidity(elements);
         int size = elements.size();
@@ -61,6 +61,6 @@ public class ArraySorter {
             }
             rightMark--;
         }
-        array = new Array(elements);
+        return new Array(elements);
     }
 }

@@ -12,7 +12,7 @@ public class Main {
         printer.print(array);
         Array arrayToSort = new Array(5, 8, 1, 6, 4, 2, 3);
         ArraySorter sorter = new ArraySorter();
-        sorter.shakerSort(arrayToSort);
+        arrayToSort = sorter.shakerSort(arrayToSort);
         printer.print(arrayToSort);
     }
 }

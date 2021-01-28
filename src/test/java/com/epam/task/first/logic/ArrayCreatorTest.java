@@ -18,9 +18,9 @@ import static org.mockito.Mockito.when;
 public class ArrayCreatorTest {
 
     private final static List<String> TEST_DATA = Arrays.asList("1 2 3","3g 4 6");
-    static DataReader reader;
-    static ArrayValidator validator;
-    static ArrayParser parser;
+    private static DataReader reader;
+    private static ArrayValidator validator;
+    private static ArrayParser parser;
     @BeforeClass
     public static void before() throws DataException {
 

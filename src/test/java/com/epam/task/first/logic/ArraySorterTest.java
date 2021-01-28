@@ -11,7 +11,7 @@ public class ArraySorterTest {
     @Test
     public void testBubbleSortShouldSortWhenArrayIsNotEmpty(){
         Array actual = new Array(5, 6, 2, 3,1,9, 2);
-        sorter.bubbleSort(actual);
+        actual = sorter.bubbleSort(actual);
         Array expected = new Array(1, 2, 2, 3, 5, 6, 9);
         Assert.assertEquals(expected, actual);
     }
@@ -25,7 +25,7 @@ public class ArraySorterTest {
     @Test
     public void testShakerSortShouldSortWhenArrayIsNotEmpty(){
         Array actual = new Array(5, 6, 2, 3,1,9, 2);
-        sorter.shakerSort(actual);
+        actual = sorter.shakerSort(actual);
         Array expected = new Array(1, 2, 2, 3, 5, 6, 9);
         Assert.assertEquals(expected, actual);
     }

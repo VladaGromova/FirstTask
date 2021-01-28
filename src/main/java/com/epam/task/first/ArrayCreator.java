@@ -22,12 +22,11 @@ public class ArrayCreator {
 
     public List<Array> process(String filename) throws DataException {
         List<Array> result = new ArrayList<Array>();
-        Array array = new Array();
 
         List<String> stringsToValidate = dataReader.readData(filename);
         for(String line : stringsToValidate){
             if (validator.validate(line)){
-                array = parser.create(line);
+                Array array = parser.create(line);
                 result.add(array);
             }
         }
